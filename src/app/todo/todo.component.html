@@ -1,0 +1,35 @@
+<div class="header">
+    <h4>Task List Using Firebase</h4>
+</div>
+<div class="input-group">
+    <input type="text" class="form-control" #Task>
+    <div class="input-group-addon hover-cursor" (click)= "onAdd(Task)">
+        <i class="fa fa-plus-circle fa-2x"></i>
+    </div>
+</div>
+<div class="container background">
+    <div class="row" *ngFor="let task of taskListArray">
+       <div class="col-md-4"></div>
+       <div class="col-md-6">
+        <span class="hover-cursor" [class.text-success]="task.isChecked" (click)="onCheckClick(task.key, task.isChecked)">
+            <i class="fa fa-lg" [ngClass]="task.isChecked? 'fa-check-circle-o':'fa-circle-thin'"></i>
+        </span>
+        {{task.name}}
+        <span class="hover-cursor text-danger pull-right" (click)="onDeleteClick(task.key)">
+            <i class="fa fa-trash-o" style="font-size:28px; color:red;"></i>
+        </span>
+       </div>
+       
+        <!-- <ul>
+        <li *ngFor="let task of taskListArray">
+            <span class="hover-cursor" [class.text-success]="task.isChecked" (click)="onCheckClick(task.key, task.isChecked)">
+                <i class="fa fa-lg" [ngClass]="task.isChecked? 'fa-check-circle-o':'fa-circle-thin'"></i>
+            </span>
+            {{task.name}}
+            <span class="hover-cursor text-danger pull-right" (click)="onDeleteClick(task.key)">
+                <i class="fa fa-trash-o" style="font-size:28px; color:red;"></i>
+            </span>
+        </li>
+        </ul> -->
+</div>
+</div>

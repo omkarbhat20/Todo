@@ -1,0 +1,26 @@
+.input-group-addon {
+    text-align: center;
+    margin-bottom: 0;
+    font-weight: 400;
+    border-radius: .25rem;
+    font-size: 1rem;
+    padding: .375 rem .75rem;
+    background-color: gray;
+
+}
+.taskList {
+    border-radius: 5px;
+    padding: 20px;
+    background-color: antiquewhite;
+}
+.header {
+    padding: 16px;
+    text-align: center;
+    background-color: aqua;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.background {
+    background-color: antiquewhite;
+}
